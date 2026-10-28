@@ -35,14 +35,14 @@ Quando o agente terminar, responda a várias perguntas e confirme que:
 
 Recolha a barra lateral esquerda e o painel do navegador à direita e revise `index.html` na área de código expandida. Observe como HTML, CSS e JavaScript trabalham juntos em um único arquivo. Restaure os dois painéis quando terminar.
 
-## Aprimorar com o seletor de elementos
+## Aprimorar com a ferramenta de seleção de elementos
 
-1. Selecione o seletor de elementos na barra de ferramentas do navegador.
+1. Na barra de ferramentas do navegador integrado, selecione a ferramenta de seleção de elementos.
 2. Selecione o título do quiz ou a área de respostas.
-3. Envie o seguinte prompt:
+3. Envie este prompt:
 
    ```plaintext
-  Faça o elemento selecionado parecer mais um painel de controle de missão. Mantenha-o acessível e preserve os temas claro e escuro existentes.
+    Dê ao elemento selecionado a aparência de um painel de controle de missão. Preserve a acessibilidade e os temas claro e escuro.
    ```
 
 4. Observe a atualização do navegador integrado e verifique a alteração.

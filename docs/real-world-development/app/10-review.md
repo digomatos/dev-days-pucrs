@@ -54,8 +54,6 @@ You've covered the core workflow. A few more features worth a look:
 
 The best way to improve with any tool is to keep using it! Use it for production code, for hobby code, for the little app you've had in mind for years but never got around to building. Share your learnings with your team, and learn from theirs. And, as always, explore the documentation.
 
-If you'd like to explore more of the GitHub Copilot ecosystem, check out the [VS Code harness][vscode-harness], the [Copilot CLI harness][cli-harness], or the [Cloud agent harness][cloud-harness].
-
 ## Resources
 
 - [About the GitHub Copilot app][about-copilot-app]
@@ -64,9 +62,6 @@ If you'd like to explore more of the GitHub Copilot ecosystem, check out the [VS
 - [Using automations][using-automations]
 - [Working with canvas extensions][canvas-docs]
 
-[vscode-harness]: ../../vscode/
-[cli-harness]: ../../cli/
-[cloud-harness]: ../../cloud/
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
 [getting-started]: https://docs.github.com/copilot/how-tos/github-copilot-app/getting-started
 [customize]: https://docs.github.com/copilot/how-tos/github-copilot-app/customize-github-copilot-app

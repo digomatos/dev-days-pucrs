@@ -54,8 +54,6 @@ Você percorreu o fluxo de trabalho principal. Veja outros recursos que valem a 
 
 A melhor maneira de melhorar com qualquer ferramenta é continuar usando-a. Use-a em código de produção, em projetos pessoais ou naquele pequeno aplicativo que você planeja criar há anos. Compartilhe o que aprendeu com sua equipe e aprenda com as experiências dela. E, como sempre, explore a documentação.
 
-Para conhecer melhor o ecossistema do GitHub Copilot, confira o [percurso do VS Code][vscode-harness], o [percurso do Copilot CLI][cli-harness] ou o [percurso do agente de nuvem][cloud-harness].
-
 ## Recursos
 
 - [Sobre o aplicativo GitHub Copilot][about-copilot-app]
@@ -64,9 +62,6 @@ Para conhecer melhor o ecossistema do GitHub Copilot, confira o [percurso do VS 
 - [Usar automações][using-automations]
 - [Trabalhar com extensões de canvas][canvas-docs]
 
-[vscode-harness]: ../../vscode/
-[cli-harness]: ../../cli/
-[cloud-harness]: ../../cloud/
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
 [getting-started]: https://docs.github.com/copilot/how-tos/github-copilot-app/getting-started
 [customize]: https://docs.github.com/copilot/how-tos/github-copilot-app/customize-github-copilot-app

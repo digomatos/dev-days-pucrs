@@ -18,7 +18,14 @@ export const collections = {
   docs: defineCollection({
     loader: glob({
       base: '../docs',
-      pattern: ['**/*.{md,mdx}', '!**/_*/**', '!**/_*'],
+      pattern: [
+        'README.md',
+        'pt-br/README.md',
+        'real-world-development/app/**/*.{md,mdx}',
+        'pt-br/real-world-development/app/**/*.{md,mdx}',
+        '!**/_*/**',
+        '!**/_*',
+      ],
     }),
     schema: docsSchema({
       extend: z.object({

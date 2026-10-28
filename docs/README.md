@@ -1,43 +1,17 @@
 ---
-title: "GitHub Copilot workshops"
+title: "Real-world Development: GitHub Copilot app workshop"
 slug: index
 authors:
   - geektrainer
 lastUpdated: 2026-09-28
 ---
 
-Choose a workshop based on what you want to learn and how deeply you want to explore it. **First steps** offers a guided introduction to GitHub Copilot, while **Real-world development** uses a complete application and team backlog to practice production-oriented workflows.
+Work through a growing team backlog with the GitHub Copilot app. This hands-on lab uses the Tailspin Toys project to practice picking up issues, running agents, reviewing changes, and merging pull requests.
 
-## First steps
+## Start the lab
 
-Start with a focused, guided experience that introduces the key capabilities of a GitHub Copilot product without requiring an existing codebase.
+The workshop takes approximately 1 to 1.5 hours and is intended for intermediate learners.
 
-### [GitHub Copilot app tour][first-steps-app]
+**[Open the GitHub Copilot app workshop][app-workshop]**
 
-Build a Space Quiz from an empty folder, publish it to GitHub, implement an issue, complete a Copilot review, schedule an automation, and explore a Canvas workflow.
-
-### [GitHub Copilot CLI first steps][first-steps-cli]
-
-Build the same Space Quiz from your terminal, review diffs, run parallel sessions in worktrees, plan before editing, and create, merge, and delegate pull requests without leaving the shell.
-
-### [Visual Studio Code first steps][first-steps-vscode]
-
-Build the Space Quiz in VS Code, test it in the integrated browser, publish with Source Control, work with issues and pull requests through GitHub tools, and hand off to a cloud session.
-
-## Real-world development
-
-Practice GitHub Copilot in a realistic software development lifecycle using the Tailspin Toys application and backlog. Choose the environment where you want to work, then plan, build, test, review, and deliver meaningful changes.
-
-### [Browse the real-world development workshops][real-world-development]
-
-Choose from GitHub Copilot CLI, the GitHub Copilot app, the GitHub Copilot cloud agent, or Visual Studio Code.
-
-> [!CAUTION]
-> GitHub Copilot is probabilistic rather than deterministic, so the exact code and files changed may vary from the examples. Small differences are expected.
->
-> If something appears broken or does not run correctly during an instructor-led workshop, ask a mentor.
-
-[first-steps-app]: first-steps/copilot-app/
-[first-steps-cli]: first-steps/copilot-cli/
-[first-steps-vscode]: first-steps/vscode/
-[real-world-development]: real-world-development/
+[app-workshop]: real-world-development/app/

@@ -16,6 +16,38 @@ const githubAdmonitionMapping = {
   CAUTION: 'caution',
 };
 
+/** @type {Record<string, string>} */
+const ptBrSidebarLabels = {
+  '/real-world-development/app/': 'Visão geral',
+  '/real-world-development/app/0-prerequisites/': '0. Pré-requisitos',
+  '/real-world-development/app/1-install-copilot-app/': '1. Instalar o aplicativo Copilot',
+  '/real-world-development/app/2-add-star-rating/': '2. Adicionar avaliações por estrelas',
+  '/real-world-development/app/3-agent-modes/': '3. Modos de agente: Plan e Autopilot',
+  '/real-world-development/app/4-custom-instructions/': '4. Instruções personalizadas',
+  '/real-world-development/app/5-agent-skills/': '5. Skill quality-checks',
+  '/real-world-development/app/6-mcp-playwright/': '6. Validar com Playwright MCP',
+  '/real-world-development/app/7-qa-agent/': '7. Agente de QA',
+  '/real-world-development/app/8-create-pull-request/': '8. Criar e mesclar o PR',
+  '/real-world-development/app/9-canvases/': '9. Explorar e criar canvases',
+  '/real-world-development/app/10-review/': '10. Revisão e próximos passos',
+  '/real-world-development/app/8-foundry-canvas/': 'Visão geral',
+  '/real-world-development/app/8-foundry-canvas/1-project-and-model/': '1. Preparar projeto e modelo',
+  '/real-world-development/app/8-foundry-canvas/2-build-and-deploy/': '2. Criar e implantar o agente',
+  '/real-world-development/app/8-foundry-canvas/3-connect-to-site/': '3. Conectar o agente ao site',
+};
+
+/** @param {any} item */
+const localizeSidebarItem = (item) => {
+  const localizedLabel = item.link ? ptBrSidebarLabels[item.link] : undefined;
+  return {
+    ...item,
+    ...(localizedLabel
+      ? { translations: { 'pt-BR': localizedLabel } }
+      : {}),
+    ...(item.items ? { items: item.items.map(localizeSidebarItem) } : {}),
+  };
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://digomatos.github.io',
@@ -30,14 +62,10 @@ export default defineConfig({
     starlight({
       title: 'Copilot Workshops',
       description:
-        'A hands-on workshop exploring GitHub Copilot agents across VS Code, the Copilot CLI, the GitHub Copilot app, and the Copilot cloud agent.',
+        'A hands-on real-world development workshop using the GitHub Copilot app.',
       locales: {
         root: { label: 'English', lang: 'en' },
-        'es-es': { label: 'Español', lang: 'es-ES' },
-        'ja-jp': { label: '日本語', lang: 'ja-JP' },
-        'ko-kr': { label: '한국어', lang: 'ko-KR' },
         'pt-br': { label: 'Português (Brasil)', lang: 'pt-BR' },
-        'zh-cn': { label: '简体中文', lang: 'zh-CN' },
       },
       social: [
         {
@@ -54,9 +82,7 @@ export default defineConfig({
         {
           label: 'Home',
           link: '/',
-          translations: {
-            'ko-KR': '홈',
-          },
+          translations: { 'pt-BR': 'Início' },
         },
         {
           label: 'First steps',
@@ -535,16 +561,12 @@ export default defineConfig({
         {
           label: 'Real-world development',
           collapsed: true,
-          translations: {
-            'ko-KR': '실제 개발',
-          },
+          translations: { 'pt-BR': 'Desenvolvimento em cenários reais' },
           items: [
             {
               label: 'Overview',
               link: '/real-world-development/',
-              translations: {
-                'ko-KR': '개요',
-              },
+              translations: { 'pt-BR': 'Visão geral' },
             },
             {
               label: 'GitHub Copilot CLI',
@@ -1018,7 +1040,30 @@ export default defineConfig({
             },
           ],
         },
-      ],
+      ]
+        .filter(
+          (section) =>
+            section.label === 'Home' || section.label === 'Real-world development',
+        )
+        .map((section) => {
+          if (section.label === 'Home') {
+            return {
+              ...section,
+              translations: { 'pt-BR': 'Início' },
+            };
+          }
+
+          return {
+            ...section,
+            translations: { 'pt-BR': 'Desenvolvimento em cenários reais' },
+            items: (section.items ?? [])
+              .filter((item) => item.label === 'GitHub Copilot app')
+              .map((item) => ({
+                ...localizeSidebarItem(item),
+                translations: { 'pt-BR': 'Aplicativo GitHub Copilot' },
+              })),
+          };
+        }),
     }),
   ],
 });

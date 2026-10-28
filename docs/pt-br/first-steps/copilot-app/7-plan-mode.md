@@ -21,7 +21,7 @@ Nesta lição, você vai:
 3. Envie o seguinte prompt e deixe o agente investigar sem alterar arquivos:
 
    ```plaintext
-   Plan how to implement this issue. Investigate the existing quiz, list the files you would change, call out risks to accessibility and the single-file constraint, and stop before making any edits.
+  Planeje como implementar esta issue. Investigue o quiz existente, liste os arquivos que você alteraria, destaque os riscos à acessibilidade e à restrição de arquivo único e pare antes de fazer qualquer edição.
    ```
 
 4. Leia o plano proposto e solicite alterações se algo estiver faltando.

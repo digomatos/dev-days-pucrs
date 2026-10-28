@@ -18,7 +18,7 @@ Nesta lição, você vai:
 
 Inclua um prompt depois de `/init`. Enviar apenas o comando pode exibir `Command input required`.
 
-1. Execute `/init create simple rules for the project` na sessão do aplicativo.
+1. Execute `/init crie regras simples para o projeto` na sessão do aplicativo.
 2. Revise o arquivo gerado de instruções para o agente antes de aceitá-lo.
 3. Enxugue-o para manter orientações que reflitam este projeto: um único arquivo, sem dependências, acessível e testado no navegador.
 

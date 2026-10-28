@@ -51,14 +51,14 @@ Verifique **Context** à medida que a sessão avança. Conforme o contexto é pr
 O navegador integrado é um navegador de verdade, então o agente pode operar o quiz e verificar seu comportamento. Envie o seguinte prompt:
 
 ```plaintext
-Run a browser-level smoke test for the quiz in the integrated browser. Check keyboard navigation, score updates, correct and incorrect feedback, and the results screen. Fix any failures, then report what passed.
+Execute um teste básico de funcionamento do quiz no navegador integrado. Verifique a navegação pelo teclado, as atualizações da pontuação, o feedback para respostas corretas e incorretas e a tela de resultados. Corrija todas as falhas e, em seguida, informe o que passou.
 ```
 
 1. Observe o navegador integrado enquanto o agente percorre as perguntas.
 2. Se algo falhar, deixe o agente corrigir o problema e executar o teste novamente até que tudo passe.
 3. Avance apenas quando a criação do projeto e o teste tiverem sido concluídos com sucesso.
 
-Nada foi gravado no Git ainda. Na próxima lição, você executará `/init create simple rules for the project`, que lê o projeto no estado atual, então vale a pena garantir primeiro que o projeto funciona.
+Nada foi gravado no Git ainda. Na próxima lição, você executará `/init crie regras simples para o projeto`, que lê o projeto no estado atual, então vale a pena garantir primeiro que o projeto funciona.
 
 ## Resumo e próximos passos
 

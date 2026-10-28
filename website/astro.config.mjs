@@ -18,8 +18,8 @@ const githubAdmonitionMapping = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://github-samples.github.io',
-  base: '/copilot-workshops',
+  site: 'https://digomatos.github.io',
+  base: '/dev-days-pucrs',
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [
@@ -43,12 +43,12 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/github-samples/copilot-workshops',
+          href: 'https://github.com/digomatos/dev-days-pucrs',
         },
       ],
       editLink: {
         baseUrl:
-          'https://github.com/github-samples/copilot-workshops/edit/main/docs/',
+          'https://github.com/digomatos/dev-days-pucrs/edit/main/docs/',
       },
       sidebar: [
         {

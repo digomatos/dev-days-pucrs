@@ -67,7 +67,7 @@ Nem toda pergunta precisa de um espaço de trabalho. Em **New**, escolha **Chat*
 Envie o seguinte prompt em uma conversa:
 
 ```plaintext
-How does the GitHub Copilot app use worktrees?
+Como o aplicativo GitHub Copilot usa worktrees?
 ```
 
 ## Resumo e próximos passos

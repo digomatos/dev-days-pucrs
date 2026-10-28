@@ -48,12 +48,12 @@ jobs:
       - name: Check links with lychee
         # Validates internal links/images in the produced HTML. Offline mode skips
         # external HTTP checks to keep CI deterministic and fast.
-        # The site is built with base=/copilot-workshops/, so HTML hrefs are absolute
-        # like /copilot-workshops/foo/. We construct a temp root where that prefix
+        # The site is built with base=/dev-days-pucrs/, so HTML hrefs are absolute
+        # like /dev-days-pucrs/foo/. We construct a temp root where that prefix
         # resolves to website/dist via a symlink so lychee can follow internal links.
         run: |
           mkdir -p /tmp/lychee-root
-          ln -sfn "$GITHUB_WORKSPACE/website/dist" /tmp/lychee-root/copilot-workshops
+          ln -sfn "$GITHUB_WORKSPACE/website/dist" /tmp/lychee-root/dev-days-pucrs
         shell: bash
 
       - name: Run lychee

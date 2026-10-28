@@ -2,14 +2,14 @@
 
 Workshop content for **Copilot Workshops**, with guided first-step experiences and real-world development scenarios across Copilot CLI, VS Code agent mode, the GitHub Copilot app, and the Copilot cloud agent.
 
-The published site lives at **<https://github-samples.github.io/copilot-workshops/>**.
+The published site lives at **<https://digomatos.github.io/dev-days-pucrs/>**.
 
 > [!NOTE]
 > The real-world development workshops use Tailspin Toys, a pure-Astro crowdfunding site (SSR, API endpoints, and a Drizzle data layer) that lives in a separate repository: **<https://github.com/github-samples/tailspin-toys>**. First steps workshops may guide learners in creating a small project from scratch. This repository holds only the workshop content: lesson Markdown, images, and the Astro + Starlight site that publishes them.
 
 ## Start the workshop
 
-Visit the published site: <https://github-samples.github.io/copilot-workshops/>.
+Visit the published site: <https://digomatos.github.io/dev-days-pucrs/>.
 
 ## Authoring
 

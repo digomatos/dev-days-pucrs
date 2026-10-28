@@ -20,7 +20,7 @@ Nesta lição, você vai:
 Envie o seguinte prompt:
 
 ```plaintext
-Review the space quiz and suggest three focused feature ideas that could each be completed in a short session. Create a separate GitHub issue for each idea with a clear title, user-focused description, and acceptance criteria. Do not implement them yet.
+Analise o Space Quiz e sugira três ideias de recursos com escopo bem definido, cada uma possível de concluir em uma sessão curta. Crie uma issue separada do GitHub para cada ideia, com título claro, descrição voltada ao usuário e critérios de aceitação. Não implemente nada ainda.
 ```
 
 Abra **Issues**, revise as três issues e escolha uma que tenha valor claro e um escopo viável.
@@ -38,7 +38,7 @@ Abra **Issues**, revise as três issues e escolha uma que tenha valor claro e um
 5. Envie o seguinte prompt:
 
    ```plaintext
-   Implement this issue completely. Keep the single-file, dependency-free design, test the behavior in the integrated browser, and summarize the changes when finished.
+  Implemente esta issue por completo. Mantenha o design de arquivo único e sem dependências, teste o comportamento no navegador integrado e, ao terminar, resuma as alterações.
    ```
 
 A nova worktree mantém esse recurso isolado da branch padrão até que você esteja pronto para revisá-lo e mesclá-lo.

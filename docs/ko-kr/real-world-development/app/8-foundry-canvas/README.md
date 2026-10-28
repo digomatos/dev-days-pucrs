@@ -5,10 +5,8 @@ description: "Microsoft Foundry Canvas로 카탈로그에 근거한 Backer Conci
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev: { link: /copilot-workshops/ko-kr/real-world-development/app/10-review/, label: 검토 및 다음 단계 }
-next:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: 프로젝트와 모델 준비
+prev: { link: /dev-days-pucrs/ko-kr/real-world-development/app/10-review/, label: "검토 및 다음 단계" }
+next: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "프로젝트와 모델 준비" }
 ---
 
 이 선택 실습 과정에서는 GitHub Copilot app의 Microsoft Foundry Canvas를 사용하여 Tailspin Toys에 **Backer Concierge**를 추가합니다. 카탈로그에 근거한 모델 실험으로 시작하여 호스팅 에이전트를 구축한 다음 로컬 웹사이트에 통합합니다.

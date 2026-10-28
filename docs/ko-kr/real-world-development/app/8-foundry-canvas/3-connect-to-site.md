@@ -4,10 +4,8 @@ description: "자격 증명을 안전하게 보호하는 로컬 프록시로 호
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: 에이전트 빌드 및 배포
-next: { link: /copilot-workshops/ko-kr/real-world-development/app/10-review/, label: 검토 및 다음 단계 }
+prev: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "에이전트 빌드 및 배포" }
+next: { link: /dev-days-pucrs/ko-kr/real-world-development/app/10-review/, label: "검토 및 다음 단계" }
 ---
 
 마지막 모듈에서는 [에이전트 빌드 및 배포][previous-module]에서 테스트한 호스팅 에이전트를 로컬에서 실행하는 Tailspin Toys 웹사이트에 연결합니다.

@@ -4,12 +4,8 @@ description: "Scaffold the Backer Concierge in Canvas, inspect it locally, and d
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: Prepare project and model
-next:
-  link: /copilot-workshops/real-world-development/app/8-foundry-canvas/3-connect-to-site/
-  label: Connect the agent to the site
+prev: { link: /dev-days-pucrs/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "Prepare project and model" }
+next: { link: /dev-days-pucrs/real-world-development/app/8-foundry-canvas/3-connect-to-site/, label: "Connect the agent to the site" }
 ---
 
 This module turns the project, model deployment, and catalog from [Prepare project and model][previous-module] into a hosted Backer Concierge through Microsoft Foundry Canvas.

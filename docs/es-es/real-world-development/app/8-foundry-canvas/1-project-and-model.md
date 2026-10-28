@@ -4,12 +4,8 @@ description: "Exporta el catálogo de Tailspin, crea un proyecto de Foundry y un
 authors:
   - juliamuiruri4
 lastUpdated: 2026-10-05
-prev:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/
-  label: "Opcional: Incorporar Foundry"
-next:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: Crear e implementar el agente
+prev: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/, label: "Opcional: Incorporar Foundry" }
+next: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "Crear e implementar el agente" }
 ---
 
 Este primer módulo prepara los datos y los recursos de Azure para Backer Concierge. Todavía no se necesita código del agente ni una implementación hospedada.

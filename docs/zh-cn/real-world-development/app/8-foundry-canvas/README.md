@@ -5,10 +5,8 @@ description: "使用 Microsoft Foundry Canvas 构建以目录为依据的 Backer
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev: { link: /copilot-workshops/zh-cn/real-world-development/app/10-review/, label: 回顾与后续步骤 }
-next:
-  link: /copilot-workshops/zh-cn/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: 准备项目和模型
+prev: { link: /dev-days-pucrs/zh-cn/real-world-development/app/10-review/, label: "回顾与后续步骤" }
+next: { link: /dev-days-pucrs/zh-cn/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "准备项目和模型" }
 ---
 
 在这一可选学习流程中，将使用 GitHub Copilot app 中的 Microsoft Foundry Canvas，为 Tailspin Toys 添加 **Backer Concierge**。整个流程从以目录为依据的模型实验开始，逐步构建托管代理，最后集成到本地网站。

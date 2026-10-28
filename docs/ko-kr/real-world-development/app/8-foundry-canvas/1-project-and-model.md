@@ -4,12 +4,8 @@ description: "Tailspin 카탈로그를 내보내고, Foundry 프로젝트와 모
 authors:
   - juliamuiruri4
 lastUpdated: 2026-10-05
-prev:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/
-  label: "선택 사항: Foundry 통합"
-next:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: 에이전트 빌드 및 배포
+prev: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/, label: "선택 사항: Foundry 통합" }
+next: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "에이전트 빌드 및 배포" }
 ---
 
 첫 번째 모듈에서는 Backer Concierge에 필요한 데이터와 Azure 리소스를 준비합니다. 아직 에이전트 코드나 호스팅 배포는 필요하지 않습니다.

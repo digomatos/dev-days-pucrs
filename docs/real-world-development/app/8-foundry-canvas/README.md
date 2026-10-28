@@ -5,10 +5,8 @@ description: "Build a catalog-grounded Backer Concierge with Microsoft Foundry C
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev: { link: /copilot-workshops/real-world-development/app/10-review/, label: Review and next steps }
-next:
-  link: /copilot-workshops/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: Prepare project and model
+prev: { link: /dev-days-pucrs/real-world-development/app/10-review/, label: "Review and next steps" }
+next: { link: /dev-days-pucrs/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "Prepare project and model" }
 ---
 
 This optional journey adds a **Backer Concierge** to Tailspin Toys using Microsoft Foundry Canvas in the GitHub Copilot app. It moves from a catalog-grounded model experiment to a hosted agent and then a local website integration.

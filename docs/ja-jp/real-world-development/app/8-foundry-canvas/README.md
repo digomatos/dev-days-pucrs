@@ -5,10 +5,8 @@ description: "Microsoft Foundry Canvas を使ってカタログに基づく Back
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev: { link: /copilot-workshops/ja-jp/real-world-development/app/10-review/, label: 振り返りと次のステップ }
-next:
-  link: /copilot-workshops/ja-jp/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: プロジェクトとモデルを準備する
+prev: { link: /dev-days-pucrs/ja-jp/real-world-development/app/10-review/, label: "振り返りと次のステップ" }
+next: { link: /dev-days-pucrs/ja-jp/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "プロジェクトとモデルを準備する" }
 ---
 
 このオプションの学習では、GitHub Copilot app の Microsoft Foundry Canvas を使い、Tailspin Toys に **Backer Concierge** を追加します。カタログに基づくモデルの実験から始め、ホステッド エージェントの構築、ローカル Web サイトへの統合へと進みます。

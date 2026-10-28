@@ -4,12 +4,8 @@ description: "在 Canvas 中生成 Backer Concierge 的初始框架，在本地�
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/zh-cn/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: 准备项目和模型
-next:
-  link: /copilot-workshops/zh-cn/real-world-development/app/8-foundry-canvas/3-connect-to-site/
-  label: 将代理连接到网站
+prev: { link: /dev-days-pucrs/zh-cn/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "准备项目和模型" }
+next: { link: /dev-days-pucrs/zh-cn/real-world-development/app/8-foundry-canvas/3-connect-to-site/, label: "将代理连接到网站" }
 ---
 
 本模块将使用 Microsoft Foundry Canvas，把[准备项目和模型][previous-module]中创建的项目、模型部署和目录转变为托管的 Backer Concierge。

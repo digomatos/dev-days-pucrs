@@ -4,12 +4,8 @@ description: "导出 Tailspin 目录，创建 Foundry 项目和模型部署，�
 authors:
   - juliamuiruri4
 lastUpdated: 2026-10-05
-prev:
-  link: /copilot-workshops/zh-cn/real-world-development/app/8-foundry-canvas/
-  label: "可选：集成 Foundry"
-next:
-  link: /copilot-workshops/zh-cn/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: 构建并部署代理
+prev: { link: /dev-days-pucrs/zh-cn/real-world-development/app/8-foundry-canvas/, label: "可选：集成 Foundry" }
+next: { link: /dev-days-pucrs/zh-cn/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "构建并部署代理" }
 ---
 
 第一个模块将准备 Backer Concierge 所需的数据和 Azure 资源。目前尚不需要代理代码或托管部署。

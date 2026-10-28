@@ -4,10 +4,8 @@ description: "Integrate the hosted Backer Concierge through a local credential-s
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: Build and deploy the agent
-next: { link: /copilot-workshops/real-world-development/app/10-review/, label: Review and next steps }
+prev: { link: /dev-days-pucrs/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "Build and deploy the agent" }
+next: { link: /dev-days-pucrs/real-world-development/app/10-review/, label: "Review and next steps" }
 ---
 
 This final module connects the tested hosted agent from [Build and deploy the agent][previous-module] to the locally running Tailspin Toys website.

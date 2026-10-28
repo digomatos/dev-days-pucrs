@@ -4,10 +4,8 @@ description: "Integra el Backer Concierge hospedado mediante un proxy local que 
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/2-build-and-deploy/
-  label: Crear e implementar el agente
-next: { link: /copilot-workshops/es-es/real-world-development/app/10-review/, label: Repaso y pasos siguientes }
+prev: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/2-build-and-deploy/, label: "Crear e implementar el agente" }
+next: { link: /dev-days-pucrs/es-es/real-world-development/app/10-review/, label: "Repaso y pasos siguientes" }
 ---
 
 Este último módulo conecta el agente hospedado probado en [Crear e implementar el agente][previous-module] con el sitio web de Tailspin Toys que se ejecuta en local.

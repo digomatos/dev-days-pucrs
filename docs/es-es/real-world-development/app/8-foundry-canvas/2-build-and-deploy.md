@@ -4,12 +4,8 @@ description: "Genera la estructura inicial de Backer Concierge en Canvas, inspec
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: Preparar el proyecto y el modelo
-next:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/3-connect-to-site/
-  label: Conectar el agente al sitio
+prev: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "Preparar el proyecto y el modelo" }
+next: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/3-connect-to-site/, label: "Conectar el agente al sitio" }
 ---
 
 Este módulo convierte el proyecto, la implementación del modelo y el catálogo de [Preparar el proyecto y el modelo][previous-module] en un Backer Concierge hospedado mediante Microsoft Foundry Canvas.

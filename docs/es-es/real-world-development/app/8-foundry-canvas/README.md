@@ -5,10 +5,8 @@ description: "Crea un Backer Concierge basado en el catálogo con Microsoft Foun
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev: { link: /copilot-workshops/es-es/real-world-development/app/10-review/, label: Repaso y pasos siguientes }
-next:
-  link: /copilot-workshops/es-es/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: Preparar el proyecto y el modelo
+prev: { link: /dev-days-pucrs/es-es/real-world-development/app/10-review/, label: "Repaso y pasos siguientes" }
+next: { link: /dev-days-pucrs/es-es/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "Preparar el proyecto y el modelo" }
 ---
 
 Este recorrido opcional añade un **Backer Concierge** a Tailspin Toys mediante Microsoft Foundry Canvas en la aplicación GitHub Copilot. Parte de un experimento con un modelo basado en el catálogo, continúa con un agente hospedado y termina con una integración local en el sitio web.

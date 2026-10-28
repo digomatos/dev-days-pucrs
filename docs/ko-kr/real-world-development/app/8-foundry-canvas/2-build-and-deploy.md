@@ -4,12 +4,8 @@ description: "Canvas에서 Backer Concierge의 기본 구조를 생성하고 로
 authors:
   - juliamuiruri4
 lastUpdated: 2026-09-16
-prev:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/1-project-and-model/
-  label: 프로젝트와 모델 준비
-next:
-  link: /copilot-workshops/ko-kr/real-world-development/app/8-foundry-canvas/3-connect-to-site/
-  label: 에이전트를 사이트에 연결
+prev: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/1-project-and-model/, label: "프로젝트와 모델 준비" }
+next: { link: /dev-days-pucrs/ko-kr/real-world-development/app/8-foundry-canvas/3-connect-to-site/, label: "에이전트를 사이트에 연결" }
 ---
 
 이 모듈에서는 [프로젝트와 모델 준비][previous-module]에서 마련한 프로젝트, 모델 배포, 카탈로그를 사용하여 Microsoft Foundry Canvas로 호스팅 Backer Concierge를 구축합니다.

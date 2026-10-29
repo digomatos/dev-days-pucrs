@@ -44,10 +44,10 @@ Use um canvas quando uma tarefa exigir estrutura, iteração e verificação e o
 Comece pelo canvas Database Explorer existente no projeto. Usar um exemplo funcional permite observar como um canvas com escopo de repositório se comporta antes de criar o seu.
 
 1. Confirme que o pull request (PR) da filtragem foi integrado e atualize sua branch `main` local.
-2. Volte ao aplicativo GitHub Copilot e selecione **Home screen**.
-3. Confirme que `tailspin-toys` é o repositório selecionado.
-4. Crie uma sessão em uma **new working tree** baseada na `main` atualizada e selecione o modo **Interactive**.
-5. Peça ao Copilot que prepare o banco de dados local, se necessário, e abra o canvas existente sem alterá-lo:
+2. Volte ao aplicativo GitHub Copilot e selecione **+** ao lado de **Sessions** na barra lateral esquerda para criar uma nova sessão.
+3. Selecione o repositório **tailspin-toys**.
+4. Crie a sessão em **New worktree**, usando a `main` atualizada como branch de origem.
+5. Selecione o modo **Interactive** e peça ao Copilot que prepare o banco de dados local, se necessário, e abra o canvas existente sem alterá-lo:
 
       ```plaintext
             Set up the local database if needed, then open the repository's Database Explorer canvas. Do not change any files.

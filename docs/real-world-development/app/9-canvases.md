@@ -44,10 +44,10 @@ Reach for a canvas when a task needs structure, iteration, and verification, and
 Start with the project's existing Database Explorer canvas. Using a working example lets you see how a repository-scoped canvas behaves before you create one yourself.
 
 1. Confirm the filtering pull request (PR) is merged and update your local `main`.
-2. Return to the GitHub Copilot app and select the **Home screen**.
-3. Confirm `tailspin-toys` is the selected repository.
-4. Create a session in a **new working tree** based on the updated `main`, then select **Interactive** mode.
-5. Ask Copilot to prepare the local database if needed and open the existing canvas without changing it:
+2. Return to the GitHub Copilot app and select **+** next to **Sessions** in the left sidebar to create a new session.
+3. Select the **tailspin-toys** repository.
+4. Create the session in **New worktree**, using the updated `main` as the source branch.
+5. Select **Interactive** mode, then ask Copilot to prepare the local database if needed and open the existing canvas without changing it:
 
     ```plaintext
     Set up the local database if needed, then open the repository's Database Explorer canvas. Do not change any files.

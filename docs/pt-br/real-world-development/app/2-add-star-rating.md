@@ -39,6 +39,8 @@ Vamos iniciar uma nova sessão para começar a explorar o projeto e implementar 
     Show each game's starRating out of 5 in the game cards on the list page. If the rating is null, show "No rating yet". Keep the card layout as it is, add tests, and run the relevant checks.
     ```
 
+    **Tradução:** Mostre o valor de `starRating` de cada jogo, de um total de 5, nos cards dos jogos na página de listagem. Se a avaliação for `null`, mostre "No rating yet" (ainda sem avaliação). Mantenha o layout atual dos cards, adicione testes e execute as verificações pertinentes.
+
 5. Pressione <kbd>Enter</kbd> para enviar o prompt ao Copilot.
 
 O aplicativo Copilot começa criando um novo worktree, uma cópia isolada do projeto. Em seguida, ele explora o projeto, localiza os arquivos que precisam ser atualizados e cria o código necessário para adicionar o novo recurso. Você acabou de adicionar um recurso com o aplicativo Copilot.
@@ -83,6 +85,8 @@ Revise os resultados das verificações automatizadas do agente antes de abrir u
     Start the app and open it in the browser canvas.
     ```
 
+    **Tradução:** Inicie o aplicativo e abra-o no canvas de navegador.
+
 2. Em alguns instantes, o aplicativo será iniciado e uma janela do navegador será aberta dentro do aplicativo Copilot.
 3. Confirme se os cards de jogos avaliados exibem a nota de um total de cinco.
 4. Quando terminar, use o prompt a seguir para pedir ao Copilot que interrompa o servidor de desenvolvimento iniciado para esta sessão:
@@ -90,6 +94,8 @@ Revise os resultados das verificações automatizadas do agente antes de abrir u
     ```plaintext
     Stop the dev server and close the browser canvas.
     ```
+
+    **Tradução:** Pare o servidor de desenvolvimento e feche o canvas de navegador.
 
 ## Abrir e fazer merge do primeiro pull request
 

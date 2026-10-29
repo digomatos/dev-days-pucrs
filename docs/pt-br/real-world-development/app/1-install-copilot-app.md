@@ -80,6 +80,8 @@ Uma ótima maneira de se familiarizar com o aplicativo é usá-lo para saber mai
    How does the GitHub Copilot app use worktrees?
    ```
 
+   **Tradução:** Como o aplicativo GitHub Copilot usa worktrees?
+
 3. Leia a resposta na visualização da conversa. Você verá que cada sessão é executada em seu próprio git worktree isolado, o que permite executar vários agentes em paralelo sem que as alterações entrem em conflito. Você pode continuar a conversa ou iniciar um novo chat a qualquer momento.
 
 ## Resumo e próximos passos

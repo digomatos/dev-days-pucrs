@@ -42,6 +42,8 @@ O proxy é a única parte do código que tem permissão para acessar suas creden
    Add a local Azure Functions proxy in api for the static Astro site to call my deployed Backer Concierge during development. Use my existing local Azure sign-in, keep credentials and Foundry conversation identifiers out of the browser, return an opaque conversation handle, validate requests, sanitize errors, and add focused tests. Configure the Astro development server so /api requests reach the local Function. Don't create public deployment infrastructure.
    ```
 
+   **Tradução:** Adicione um proxy local do Azure Functions em `api` para que o site estático do Astro chame meu Backer Concierge implantado durante o desenvolvimento. Use meu login local existente do Azure, mantenha as credenciais e os identificadores de conversa do Foundry fora do navegador, retorne uma referência opaca à conversa, valide as solicitações, remova informações sensíveis dos erros e adicione testes focados. Configure o servidor de desenvolvimento do Astro para encaminhar as solicitações `/api` à Function local. Não crie infraestrutura de implantação pública.
+
 4. Revise o proxy gerado e os testes focados quanto à validação de solicitações, à remoção de informações sensíveis dos erros, às referências opacas de conversa e à proteção de credenciais restrita ao servidor. Peça ao Copilot que execute os testes focados e corrija quaisquer falhas.
 5. Abra outro terminal, inicie a Function local usando o comando fornecido pelo Copilot e deixe-a em execução.
 6. Volte ao chat e peça ao Copilot que teste o proxy local:
@@ -49,6 +51,8 @@ O proxy é a única parte do código que tem permissão para acessar suas creden
    ```plaintext
    Test the local /api/concierge endpoint by asking "Which games are under $30?" Show me the sanitized response and confirm that no credentials or internal conversation identifiers are returned.
    ```
+
+   **Tradução:** Teste o endpoint local `/api/concierge` perguntando "Quais jogos custam menos de US$ 30?". Mostre a resposta sem informações sensíveis e confirme que nenhuma credencial ou identificador interno de conversa é retornado.
 
 7. Inspecione a resposta: ela deve explicar que o catálogo não contém preços. Confirme que ela não contém token do Foundry, credencial, identificador interno de conversa, endpoint do projeto nem rastreamento de pilha. Se não for possível acessar a Function ou se a resposta expuser detalhes ou inventar preços, envie ao Copilot as informações da falha sem dados sensíveis, corrija o problema e execute novamente os testes do proxy antes de continuar.
 
@@ -64,12 +68,16 @@ Com o proxy em execução, o widget apresenta a conversa no site sem expor detal
    Add an accessible Backer Concierge chat widget to the Astro site. Connect it to /api/concierge, preserve the conversation using the returned opaque handle, follow the existing design guidance, support keyboard use, keep Foundry details out of the browser, and add end-to-end tests covering the chat flow, conversation continuity, accessibility, error handling, and grounding boundaries.
    ```
 
+   **Tradução:** Adicione um widget de chat acessível do Backer Concierge ao site do Astro. Conecte-o a `/api/concierge`, preserve a conversa usando a referência opaca retornada, siga as orientações de design existentes, ofereça suporte ao uso por teclado, mantenha os detalhes do Foundry fora do navegador e adicione testes de ponta a ponta que cubram o fluxo de chat, a continuidade da conversa, a acessibilidade, o tratamento de erros e os limites das informações usadas para fundamentar as respostas.
+
 9. Inicie o servidor de desenvolvimento do Astro em outro terminal usando o comando fornecido pelo Copilot. Mantenha o site e a Function local em execução.
 10. Peça ao Copilot que execute os testes de ponta a ponta:
 
     ```plaintext
     Run the end-to-end tests for the Backer Concierge widget in the Tailspin Toys site. Verify its core chat flow, conversation continuity, accessibility, error handling, grounding boundaries, and secure use of the local proxy. Report the results and include evidence for any failures.
     ```
+
+   **Tradução:** Execute os testes de ponta a ponta do widget Backer Concierge no site Tailspin Toys. Verifique o fluxo principal de chat, a continuidade da conversa, a acessibilidade, o tratamento de erros, os limites das informações usadas para fundamentar as respostas e o uso seguro do proxy local. Relate os resultados e inclua evidências de quaisquer falhas.
 
 11. Revise o relatório e verifique o comportamento relatado no navegador, incluindo o uso do teclado e a conversa de duas interações das [verificações de aceitação do agente hospedado][agent-checks]. Confirme que as solicitações do navegador passam por `/api/concierge` com uma referência opaca, e não diretamente pelo Foundry, e que as respostas não expõem credenciais nem identificadores internos do Foundry. Verifique se as recomendações e as respostas sobre dados ausentes permanecem dentro dos limites do catálogo. Corrija os testes que falharam com o Copilot, reinicie o serviço local afetado se necessário e execute os testes novamente.
 

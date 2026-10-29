@@ -49,6 +49,8 @@ As skills podem ser chamadas diretamente com um comando de barra (`/`) ou por me
     Run the quality-checks skill for unit tests, lint, and type checks.
     ```
 
+    **Tradução:** Execute a skill `quality-checks` para realizar testes unitários, lint e verificações de tipos.
+
 3. Observe o relatório ao final.
 
 ## Personalizar o relatório
@@ -77,6 +79,8 @@ Com a alteração feita, vamos vê-la em ação! Usaremos exatamente o mesmo pro
     ```plaintext
     Run the quality-checks skill for unit tests, lint, and type checks.
     ```
+
+    **Tradução:** Execute a skill `quality-checks` para realizar testes unitários, lint e verificações de tipos.
 
 3. Observe o relatório ao final.
 

@@ -43,6 +43,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
    Scaffold a hosted agent named Backer Concierge in agent/backer-concierge, connected to the tailspin-toys project and the model deployment I just confirmed. Use Microsoft Agent Framework with the Responses API. Ground it in db/catalog.json and ensure it meets the acceptance criteria in this issue. Keep a single azure.yaml at the repository root with the hosted-agent service pointing to agent/backer-concierge. Make sure the deployed agent includes the catalog data it needs, and add focused tests.
    ```
 
+    **Tradução:** Gere a estrutura inicial de um agente hospedado chamado Backer Concierge em `agent/backer-concierge`, conectado ao projeto `tailspin-toys` e à implantação de modelo que acabei de confirmar. Use o Microsoft Agent Framework com a Responses API. Fundamente as respostas em `db/catalog.json` e garanta que o agente atenda aos critérios de aceitação desta issue. Mantenha um único `azure.yaml` na raiz do repositório, com o serviço do agente hospedado apontando para `agent/backer-concierge`. Garanta que o agente implantado inclua os dados do catálogo de que precisa e adicione testes focados.
+
    O Canvas envia ao Copilot o prompt e o contexto da assinatura atual e do projeto do Foundry. Ele procura exemplos de Agent Framework + Responses API; pode aparecer uma opção como **Agent with Local Tools (Responses, Agent Framework, Python)**.
 
    ![Gerar a estrutura inicial do agente Backer Concierge no Canvas](../../../../_images/app-8-scaffold-backer-concierge.png)
@@ -84,6 +86,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     I love puzzle games about tracking down bugs. What should I back?
     ```
 
+    **Tradução:** Adoro jogos de quebra-cabeça sobre rastrear bugs. Qual jogo devo apoiar?
+
     Resultado esperado: menciona somente títulos reais do catálogo e usa as informações corretas para cada título.
 
     ![Recomendação fundamentada no catálogo no Agent Inspector](../../../../_images/app-8-grounded-recommendation.png)
@@ -94,6 +98,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     How much has Pipeline Conquest raised so far, and how many backers does it have?
     ```
 
+    **Tradução:** Quanto o Pipeline Conquest arrecadou até agora e quantos apoiadores ele tem?
+
     Resultado esperado: explica que o catálogo não acompanha a arrecadação nem os apoiadores e, em seguida, oferece informações que estão presentes.
 
 11. Teste a **pressão para ir além do catálogo**:
@@ -101,6 +107,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     ```text
     Do you have Wingspan? If not, what's the closest thing you've got?
     ```
+
+    **Tradução:** Vocês têm Wingspan? Se não, qual é o jogo mais parecido que vocês têm?
 
     Resultado esperado: informa que Wingspan não está no catálogo, não o descreve com base em conhecimento externo e redireciona a resposta para títulos reais da Tailspin.
 
@@ -110,6 +118,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     Recommend me something good.
     ```
 
+    **Tradução:** Recomende algo bom para mim.
+
     Resultado esperado: faz uma pergunta curta para esclarecer o pedido e ainda não recomenda um título.
 
 13. Teste a **precisão da classificação**:
@@ -117,6 +127,8 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     ```text
     What are your three highest rated games?
     ```
+
+    **Tradução:** Quais são os três jogos mais bem avaliados do catálogo?
 
     Resultado esperado: retorna as três entradas mais bem avaliadas do catálogo na ordem correta e com as avaliações corretas.
 
@@ -126,9 +138,13 @@ O Canvas gera o código, a estrutura de pastas e o `azure.yaml` na raiz que cone
     Show me two highly rated strategy games.
     ```
 
+    **Tradução:** Mostre dois jogos de estratégia bem avaliados.
+
     ```text
     Which of those has the higher rating?
     ```
+
+    **Tradução:** Qual deles tem a avaliação mais alta?
 
     Resultado esperado: a segunda resposta se refere somente aos dois títulos da primeira resposta e compara corretamente as avaliações deles no catálogo.
 

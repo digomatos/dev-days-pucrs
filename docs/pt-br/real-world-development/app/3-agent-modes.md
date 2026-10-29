@@ -71,6 +71,8 @@ O planejamento permite revisar a abordagem antes que o Copilot escreva o código
 Build this feature.
 ```
 
+**Tradução:** Implemente este recurso.
+
 Responda às perguntas do Copilot e compare o plano com os critérios de aceitação da issue. Verifique se ele abrange a filtragem por categoria e editora, controles acessíveis, alterações no acesso a dados e testes. Discuta qualquer comportamento que não esteja claro, como a forma de combinar várias categorias ou o que acontece quando nenhum jogo corresponde aos filtros.
 
 O plano deve incluir lint, testes de unidade, testes E2E e verificação de tipos usando as ferramentas existentes do projeto. Mantenha o foco na implementação e nos testes da filtragem; você criará o PR depois de concluir o fluxo de qualidade. Solicite alterações no plano antes de aprová-lo e mantenha à mão a URL da issue e os esclarecimentos definidos para a validação posterior.
@@ -103,6 +105,8 @@ O código parece correto, mas será que funciona? Vamos iniciar o aplicativo com
     Start the app and open it in the browser canvas.
     ```
 
+    **Tradução:** Inicie o aplicativo e abra-o no canvas de navegador.
+
 2. Em alguns instantes, o aplicativo será iniciado e uma janela do navegador será aberta dentro do aplicativo Copilot.
 3. Confirme se os cards de jogos avaliados exibem a nota de um total de cinco.
 4. Quando terminar, use o prompt a seguir para pedir ao Copilot que interrompa o servidor de desenvolvimento iniciado para esta sessão:
@@ -110,6 +114,8 @@ O código parece correto, mas será que funciona? Vamos iniciar o aplicativo com
     ```plaintext
     Stop the dev server and close the browser canvas.
     ```
+
+    **Tradução:** Pare o servidor de desenvolvimento e feche o canvas de navegador.
 
 ## Resumo e próximos passos
 

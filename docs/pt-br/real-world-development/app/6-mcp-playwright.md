@@ -56,6 +56,8 @@ A issue e suas decisões de planejamento já estão no contexto. Interrompa qual
     Start the app and use Playwright MCP to check filtering against the issue and our plan. Tell me what works and what doesn't, without making changes. Stop the server you started when you're done.
     ```
 
+    **Tradução:** Inicie o aplicativo e use o MCP do Playwright para verificar a filtragem em relação à issue e ao nosso plano. Diga o que funciona e o que não funciona, sem fazer alterações. Quando terminar, pare o servidor que você iniciou.
+
 > [!NOTE]
 > Você não precisa dizer ao Copilot para usar um servidor MCP específico; normalmente, ele encontrará o servidor adequado com base no contexto atual. No entanto, não há problema em informar ao Copilot algo que você considera importante.
 

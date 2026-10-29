@@ -37,6 +37,10 @@ Antes de abrir o PR do recurso, você pedirá ao Copilot que crie um perfil de Q
     Have it report each requirement as pass, fail, or blocked with supporting evidence. It must ask before changing implementation code, and it must not commit changes or open pull requests. Use the current model and available tools. Just create the profile for now so I can review it.
     ```
 
+    **Tradução:** Crie um agente personalizado chamado QA em `.github/agents/qa.agent.md`. Ele deve verificar os recursos em relação às respectivas issues e aos requisitos acordados, seguir as instruções do repositório, executar a skill `quality-checks`, usar o MCP do Playwright para verificar o comportamento e adicionar testes quando faltar cobertura.
+
+    Faça com que ele relate cada requisito como aprovado (`pass`), reprovado (`fail`) ou bloqueado (`blocked`), com evidências que sustentem o resultado. Ele deve perguntar antes de alterar o código da implementação e não deve fazer commits nem abrir pull requests. Use o modelo atual e as ferramentas disponíveis. Por enquanto, apenas crie o perfil para que eu possa revisá-lo.
+
 ## Examinar o perfil
 
 Antes de usar o novo agente, revise o perfil para confirmar que o Copilot capturou o fluxo e os limites de autoridade de QA pretendidos. Isso evita que um agente incompleto ou amplo demais altere o recurso quando você deseja apenas verificá-lo.
@@ -58,6 +62,8 @@ Com o perfil revisado, selecione QA na sessão atual para que ele possa usar a i
     ```plaintext
     Review the filtering feature against the issue and the decisions in our plan. Is it ready for a PR?
     ```
+
+    **Tradução:** Revise o recurso de filtragem em relação à issue e às decisões do nosso plano. Ele está pronto para um PR?
 
 4. Confirme que o QA usa a issue e as decisões de planejamento corretas. Forneça a URL da issue ou qualquer contexto ausente se ele solicitar.
 5. Quando o trabalho for concluído, leia o relatório apresentado.

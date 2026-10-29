@@ -53,6 +53,8 @@ Comece pelo canvas Database Explorer existente no projeto. Usar um exemplo funci
             Set up the local database if needed, then open the repository's Database Explorer canvas. Do not change any files.
       ```
 
+      **Tradução:** Configure o banco de dados local, se necessário, e depois abra o canvas Database Explorer do repositório. Não altere nenhum arquivo.
+
 6. No Database Explorer, navegue pelas tabelas disponíveis e selecione `games`.
 7. Execute uma consulta somente leitura que mostre cinco jogos com as melhores avaliações:
 
@@ -78,6 +80,10 @@ Agora, crie outro tipo de superfície compartilhada. Salvar o canvas de triagem 
 
    Give each card an "Add to current context" action that adds the issue details without starting work or changing the issue. Make it keyboard-accessible and open it so I can try it.
    ```
+
+      **Tradução:** Crie um canvas Kanban para a triagem das issues abertas deste repositório e salve-o em `.github/extensions/`. Destaque as três issues que você priorizaria e explique o motivo, com as demais abaixo. Inclua resumos e links.
+
+      Adicione a cada card uma ação "Add to current context" (adicionar ao contexto atual) que inclua os detalhes da issue sem iniciar o trabalho nem alterar a issue. Torne o canvas acessível por teclado e abra-o para que eu possa experimentá-lo.
 
 O Copilot cria a extensão de canvas em `.github/extensions` e abre a superfície compartilhada no painel direito do aplicativo. A extensão gerada é conteúdo executável do repositório, não apenas um artefato visual, então você examinará seus arquivos e seu comportamento em seguida.
 

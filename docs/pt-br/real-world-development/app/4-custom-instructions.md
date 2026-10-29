@@ -71,6 +71,8 @@ Embora os arquivos existentes sejam um bom começo, ainda há algumas lacunas. V
    All new TypeScript should contain TSDocs comments for documentation purposes.
    ```
 
+   **Tradução:** Todo código TypeScript novo deve conter comentários TSDocs para fins de documentação.
+
 O arquivo é salvo automaticamente e está pronto para uso!
 
 ## Usar as orientações atualizadas
@@ -85,6 +87,8 @@ Com o arquivo de instruções atualizado, vamos observar seu impacto sobre o có
    ```plaintext
    We just updated our instructions and code guidance. Can you please update the code you generated to match that guidance?
    ```
+
+   **Tradução:** Acabamos de atualizar nossas instruções e orientações de código. Você pode atualizar o código que gerou para seguir essas orientações?
 
 2. Selecione **Changes** no canto superior direito para abrir as alterações de código.
 

@@ -49,7 +49,7 @@ Vamos permitir que o Agent Merge também faça o merge do PR quando tudo for con
 
 5. Depois que o pull request for criado, selecione **View PR** para abri-lo. Revise o diff do PR e as evidências de verificação antes de conceder permissão de merge.
 6. Selecione o menu suspenso ao lado de **Agent Merge**.
-7. Confirme se há uma marca ao lado de **Merge pull request**.
+7. Confirme que a opção **Merge pull request** está selecionada, com uma marca de seleção ao lado.
 8. Peça explicitamente ao agente que faça o merge:
 
   ```plaintext

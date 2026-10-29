@@ -57,7 +57,7 @@ Comece pelo canvas Database Explorer existente no projeto. Usar um exemplo funci
 
       **Tradução:** Examine os scripts do projeto, instale as dependências e use os scripts existentes de configuração e seed do banco de dados se o banco local ainda não tiver sido inicializado. Preserve qualquer banco existente e seu conteúdo. Confira se os scripts e a extensão Database Explorer existente usam o mesmo banco. Você pode instalar dependências e configurar os arquivos locais necessários, mas não deve modificar o código da aplicação ou da extensão, sobrescrever o banco, fazer commit, push ou abrir um pull request. Informe o que executou, os caminhos dos bancos e quaisquer bloqueios antes de abrir o canvas.
 
-6. Revise a saída dos scripts e os caminhos dos bancos. O laboratório usou os scripts de instalação de dependências e `npm run db:setup` do projeto. Examine os scripts antes de executar comandos de configuração ou seed sobre um banco existente; não o redefina nem sobrescreva. Se o carregamento falhar ou os caminhos dos bancos forem diferentes, siga as orientações de [solução de problemas do Database Explorer](#solucionar-problemas-do-database-explorer) antes de continuar.
+6. Revise a saída dos scripts e os caminhos dos bancos. O laboratório usou os scripts de instalação de dependências e `npm run db:setup` do projeto. Examine os scripts antes de executar comandos de configuração ou seed sobre um banco existente; não o redefina nem sobrescreva. Se o carregamento falhar ou os caminhos dos bancos forem diferentes, peça ao Copilot que investigue o problema antes de continuar.
 7. Depois de instalar as dependências e configurar o caminho do banco local, execute `/restart-session` para recarregar a extensão na mesma sessão, preservando o histórico e o mesmo worktree. Não crie outra sessão ou worktree.
 8. Peça ao Copilot que abra o canvas existente e confira suas tabelas e seus dados:
 
@@ -83,45 +83,6 @@ Comece pelo canvas Database Explorer existente no projeto. Usar um exemplo funci
 
 > [!NOTE]
 > Durante o teste do laboratório, as tabelas e os dados foram verificados pelas ações do próprio canvas, sem inspeção visual do painel renderizado. Isso confirma as verificações dos dados, não a renderização visual do painel. Confirme o painel visualmente antes de considerar essa parte do exercício concluída. Use o endereço e a porta informados pela sua sessão, se necessário; nenhum dos dois é fixo.
-
-### Solucionar problemas do Database Explorer
-
-#### Dependência ausente
-
-Se `.github/extensions/database-explorer/extension.mjs` falhar ao carregar com `Cannot find package '@libsql/client'`, execute o comando a seguir na raiz do worktree atual:
-
-```bash
-npm install --no-save @libsql/client
-```
-
-> [!NOTE]
-> `npm ci` remove a dependência instalada com `--no-save`. Se você executar `npm ci` novamente, reinstale `@libsql/client` antes de executar `/restart-session`.
-
-#### Caminhos diferentes para o banco
-
-Confira se `DATABASE_URL` está definido para o canvas e compare o caminho do banco resolvido com os scripts do projeto. No ambiente testado, os scripts criaram `tailspin.db` na raiz do worktree, mas a extensão procurou `.data/tailspin.db` quando `DATABASE_URL` não estava definido. Evite que a extensão crie ou leia outro banco vazio por engano.
-
-O contorno validado no Windows foi criar `.data/tailspin.db` como hardlink para o `tailspin.db` da raiz e adicionar `/.data/` ao arquivo de exclusão local do Git, não ao `.gitignore` versionado. Um hardlink se refere ao mesmo banco, não a uma cópia dele. Isso é uma **solução local de contorno**, não uma correção permanente do projeto, e exige um sistema de arquivos com suporte a hardlinks no mesmo volume.
-
-Na raiz do worktree atual, use o PowerShell para conferir os caminhos e criar o link somente se a origem existir e o destino não existir:
-
-```powershell
-if (-not (Test-Path -LiteralPath 'tailspin.db' -PathType Leaf)) {
-      throw 'The root tailspin.db is missing. Check the project setup output first.'
-}
-if (Get-Item -LiteralPath '.data/tailspin.db' -Force -ErrorAction SilentlyContinue) {
-      throw 'The destination already exists. Inspect it; do not overwrite it.'
-}
-New-Item -ItemType Directory -Path '.data' -Force -ErrorAction Stop | Out-Null
-New-Item -ItemType HardLink -Path '.data/tailspin.db' -Target (Resolve-Path -LiteralPath 'tailspin.db').Path -ErrorAction Stop
-$excludePath = git rev-parse --git-path info/exclude
-if ($LASTEXITCODE -ne 0) {
-      throw 'Could not locate the local Git exclude file.'
-}
-Add-Content -LiteralPath $excludePath -Value "`n/.data/"
-```
-
-Se o destino já existir, pare e inspecione qual banco ele contém; não o exclua nem substitua. Se não houver suporte a hardlinks, pare e relate o bloqueio em vez de copiar ou sobrescrever um banco. Depois de resolver o problema de dependência ou de caminho, execute `/restart-session` na mesma sessão e worktree, peça ao Copilot que reabra o canvas e repita as verificações de tabelas, dados e renderização visual.
 
 ## Criar um canvas para fazer a triagem de issues
 

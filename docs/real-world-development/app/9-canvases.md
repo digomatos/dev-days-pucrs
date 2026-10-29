@@ -55,7 +55,7 @@ Start with the project's existing Database Explorer canvas. Using a working exam
   Inspect the project's package scripts, install its dependencies, and use its existing database setup and seed scripts if the local database has not already been initialized. Preserve any existing database and its contents. Check that the scripts and the existing Database Explorer extension use the same database. You may install dependencies and configure necessary local files, but do not modify application or extension code, overwrite the database, commit, push, or open a pull request. Report what you ran, the database paths, and any blockers before opening the canvas.
     ```
 
-6. Review the script output and database paths. The lab used the project's dependency installation and `npm run db:setup` scripts. Inspect the scripts before running setup or seed commands against an existing database; do not reset or overwrite it. If loading fails or the database paths differ, follow [Troubleshoot the Database Explorer](#troubleshoot-the-database-explorer) before continuing.
+6. Review the script output and database paths. The lab used the project's dependency installation and `npm run db:setup` scripts. Inspect the scripts before running setup or seed commands against an existing database; do not reset or overwrite it. If loading fails or the database paths differ, ask Copilot to investigate the problem before continuing.
 7. After installing dependencies and configuring the local database path, run `/restart-session` to reload the extension in the same session, preserving its history and the same worktree. Do not create another session or worktree.
 8. Ask Copilot to open the existing canvas and check its tables and data:
 
@@ -79,45 +79,6 @@ Start with the project's existing Database Explorer canvas. Using a working exam
 
   > [!NOTE]
   > During the lab test, the tables and data were verified through the canvas's own actions, without visually inspecting the rendered panel. That confirms the data checks, not the panel's visual rendering. Confirm the panel visually yourself before treating that part of the exercise as complete. Use the address and port reported by your session if needed; neither is fixed.
-
-  ### Troubleshoot the Database Explorer
-
-  #### Missing dependency
-
-  If `.github/extensions/database-explorer/extension.mjs` fails to load with `Cannot find package '@libsql/client'`, run the following command from the current worktree's root:
-
-  ```bash
-  npm install --no-save @libsql/client
-  ```
-
-  > [!NOTE]
-  > `npm ci` removes the dependency installed with `--no-save`. If you run `npm ci` again, reinstall `@libsql/client` before running `/restart-session`.
-
-  #### Database path mismatch
-
-  Check whether `DATABASE_URL` is defined for the canvas and compare its resolved database path with the project's scripts. In the tested setup, the scripts created `tailspin.db` at the worktree root, but the extension looked for `.data/tailspin.db` when `DATABASE_URL` was not set. Do not let the extension create or read a separate empty database by mistake.
-
-  The workaround validated on Windows was to create `.data/tailspin.db` as a hardlink to the root `tailspin.db`, then add `/.data/` to Git's local exclude file, not the tracked `.gitignore`. A hardlink refers to the same database, not a copied database. This is a **local workaround**, not a permanent project fix, and requires a filesystem that supports hardlinks on the same volume.
-
-  From the current worktree's root, use PowerShell to check the paths and create the link only if the source exists and the destination does not:
-
-  ```powershell
-  if (-not (Test-Path -LiteralPath 'tailspin.db' -PathType Leaf)) {
-    throw 'The root tailspin.db is missing. Check the project setup output first.'
-  }
-  if (Get-Item -LiteralPath '.data/tailspin.db' -Force -ErrorAction SilentlyContinue) {
-    throw 'The destination already exists. Inspect it; do not overwrite it.'
-  }
-  New-Item -ItemType Directory -Path '.data' -Force -ErrorAction Stop | Out-Null
-  New-Item -ItemType HardLink -Path '.data/tailspin.db' -Target (Resolve-Path -LiteralPath 'tailspin.db').Path -ErrorAction Stop
-  $excludePath = git rev-parse --git-path info/exclude
-  if ($LASTEXITCODE -ne 0) {
-    throw 'Could not locate the local Git exclude file.'
-  }
-  Add-Content -LiteralPath $excludePath -Value "`n/.data/"
-  ```
-
-  If the destination already exists, stop and inspect which database it contains; do not delete or replace it. If hardlinks are unavailable, stop and report the blocker instead of copying or overwriting a database. After resolving the dependency or path issue, run `/restart-session` in the same session and worktree, then ask Copilot to reopen the canvas and repeat the table, data, and visual checks.
 
 ## Create a canvas to triage issues
 

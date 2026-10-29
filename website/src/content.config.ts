@@ -23,6 +23,7 @@ export const collections = {
         'pt-br/README.md',
         'real-world-development/app/**/*.{md,mdx}',
         'pt-br/real-world-development/app/**/*.{md,mdx}',
+        '!**/8-foundry-canvas/**',
         '!**/_*/**',
         '!**/_*',
       ],

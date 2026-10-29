@@ -43,31 +43,85 @@ Use um canvas quando uma tarefa exigir estrutura, iteração e verificação e o
 
 Comece pelo canvas Database Explorer existente no projeto. Usar um exemplo funcional permite observar como um canvas com escopo de repositório se comporta antes de criar o seu.
 
+### Preparar e abrir o canvas
+
 1. Confirme que o pull request (PR) da filtragem foi integrado e atualize sua branch `main` local.
 2. Volte ao aplicativo GitHub Copilot e selecione **+** ao lado de **Sessions** na barra lateral esquerda para criar uma nova sessão.
 3. Selecione o repositório **tailspin-toys**.
 4. Crie a sessão em **New worktree**, usando a `main` atualizada como branch de origem.
-5. Selecione o modo **Interactive** e peça ao Copilot que prepare o banco de dados local, se necessário, e abra o canvas existente sem alterá-lo:
+5. Selecione o modo **Interactive** e peça ao Copilot que prepare as dependências e o banco de dados local usando os scripts do projeto:
 
       ```plaintext
-            Set up the local database if needed, then open the repository's Database Explorer canvas. Do not change any files.
+      Inspect the project's package scripts, install its dependencies, and use its existing database setup and seed scripts if the local database has not already been initialized. Preserve any existing database and its contents. Check that the scripts and the existing Database Explorer extension use the same database. You may install dependencies and configure necessary local files, but do not modify application or extension code, overwrite the database, commit, push, or open a pull request. Report what you ran, the database paths, and any blockers before opening the canvas.
       ```
 
-      **Tradução:** Configure o banco de dados local, se necessário, e depois abra o canvas Database Explorer do repositório. Não altere nenhum arquivo.
+      **Tradução:** Examine os scripts do projeto, instale as dependências e use os scripts existentes de configuração e seed do banco de dados se o banco local ainda não tiver sido inicializado. Preserve qualquer banco existente e seu conteúdo. Confira se os scripts e a extensão Database Explorer existente usam o mesmo banco. Você pode instalar dependências e configurar os arquivos locais necessários, mas não deve modificar o código da aplicação ou da extensão, sobrescrever o banco, fazer commit, push ou abrir um pull request. Informe o que executou, os caminhos dos bancos e quaisquer bloqueios antes de abrir o canvas.
 
-6. No Database Explorer, navegue pelas tabelas disponíveis e selecione `games`.
-7. Execute uma consulta somente leitura que mostre cinco jogos com as melhores avaliações:
+6. Revise a saída dos scripts e os caminhos dos bancos. O laboratório usou os scripts de instalação de dependências e `npm run db:setup` do projeto. Examine os scripts antes de executar comandos de configuração ou seed sobre um banco existente; não o redefina nem sobrescreva. Se o carregamento falhar ou os caminhos dos bancos forem diferentes, siga as orientações de [solução de problemas do Database Explorer](#solucionar-problemas-do-database-explorer) antes de continuar.
+7. Depois de instalar as dependências e configurar o caminho do banco local, execute `/restart-session` para recarregar a extensão na mesma sessão, preservando o histórico e o mesmo worktree. Não crie outra sessão ou worktree.
+8. Peça ao Copilot que abra o canvas existente e confira suas tabelas e seus dados:
+
+      ```plaintext
+      Open the repository's existing Database Explorer canvas. Use its read-only actions to list the tables and verify the seeded data. Do not modify application or extension code, overwrite the database, commit, push, or open a pull request.
+      ```
+
+      **Tradução:** Abra o canvas Database Explorer existente no repositório. Use suas ações somente leitura para listar as tabelas e verificar os dados do seed. Não modifique o código da aplicação ou da extensão, sobrescreva o banco, faça commit, push ou abra um pull request.
+
+9. Confirme visualmente que o painel do Database Explorer abre e exibe suas tabelas e seus dados. Para o seed utilizado no laboratório, o resultado esperado foi de **21 jogos, 5 categorias e 4 publishers**. A tabela `__drizzle_migrations` também apareceu. Selecione `games` e examine suas linhas; use as ações somente leitura do canvas para conferir as contagens. Investigue diferenças em vez de sobrescrever um banco existente para forçar esses resultados.
+10. Execute uma consulta somente leitura que mostre cinco jogos com as melhores avaliações:
 
       ```sql
-            SELECT title, star_rating
-            FROM games
-            ORDER BY star_rating DESC
-            LIMIT 5;
+      SELECT title, star_rating
+      FROM games
+      ORDER BY star_rating DESC
+      LIMIT 5;
       ```
 
-8. Confirme que os resultados contêm no máximo cinco jogos em ordem decrescente de avaliação.
-9. Abra **Files** e examine `.github/extensions/database-explorer/extension.mjs`. Observe como o canvas é armazenado com o projeto e restringe as consultas a instruções `SELECT` e `WITH` somente leitura.
-10. Confirme que a sessão não tem alterações em arquivos.
+11. Confirme que os resultados contêm no máximo cinco jogos em ordem decrescente de avaliação.
+12. Abra **Files** e examine `.github/extensions/database-explorer/extension.mjs`. Observe como o canvas é armazenado com o projeto e restringe as consultas a instruções `SELECT` e `WITH` somente leitura.
+13. Revise as alterações locais e confirme que o código da aplicação e da extensão permanece inalterado. A instalação de dependências e a configuração do banco podem criar arquivos locais; não faça commit, push ou abra um PR para essa configuração.
+
+> [!NOTE]
+> Durante o teste do laboratório, as tabelas e os dados foram verificados pelas ações do próprio canvas, sem inspeção visual do painel renderizado. Isso confirma as verificações dos dados, não a renderização visual do painel. Confirme o painel visualmente antes de considerar essa parte do exercício concluída. Use o endereço e a porta informados pela sua sessão, se necessário; nenhum dos dois é fixo.
+
+### Solucionar problemas do Database Explorer
+
+#### Dependência ausente
+
+Se `.github/extensions/database-explorer/extension.mjs` falhar ao carregar com `Cannot find package '@libsql/client'`, execute o comando a seguir na raiz do worktree atual:
+
+```bash
+npm install --no-save @libsql/client
+```
+
+> [!NOTE]
+> `npm ci` remove a dependência instalada com `--no-save`. Se você executar `npm ci` novamente, reinstale `@libsql/client` antes de executar `/restart-session`.
+
+#### Caminhos diferentes para o banco
+
+Confira se `DATABASE_URL` está definido para o canvas e compare o caminho do banco resolvido com os scripts do projeto. No ambiente testado, os scripts criaram `tailspin.db` na raiz do worktree, mas a extensão procurou `.data/tailspin.db` quando `DATABASE_URL` não estava definido. Evite que a extensão crie ou leia outro banco vazio por engano.
+
+O contorno validado no Windows foi criar `.data/tailspin.db` como hardlink para o `tailspin.db` da raiz e adicionar `/.data/` ao arquivo de exclusão local do Git, não ao `.gitignore` versionado. Um hardlink se refere ao mesmo banco, não a uma cópia dele. Isso é uma **solução local de contorno**, não uma correção permanente do projeto, e exige um sistema de arquivos com suporte a hardlinks no mesmo volume.
+
+Na raiz do worktree atual, use o PowerShell para conferir os caminhos e criar o link somente se a origem existir e o destino não existir:
+
+```powershell
+if (-not (Test-Path -LiteralPath 'tailspin.db' -PathType Leaf)) {
+      throw 'The root tailspin.db is missing. Check the project setup output first.'
+}
+if (Get-Item -LiteralPath '.data/tailspin.db' -Force -ErrorAction SilentlyContinue) {
+      throw 'The destination already exists. Inspect it; do not overwrite it.'
+}
+New-Item -ItemType Directory -Path '.data' -Force -ErrorAction Stop | Out-Null
+New-Item -ItemType HardLink -Path '.data/tailspin.db' -Target (Resolve-Path -LiteralPath 'tailspin.db').Path -ErrorAction Stop
+$excludePath = git rev-parse --git-path info/exclude
+if ($LASTEXITCODE -ne 0) {
+      throw 'Could not locate the local Git exclude file.'
+}
+Add-Content -LiteralPath $excludePath -Value "`n/.data/"
+```
+
+Se o destino já existir, pare e inspecione qual banco ele contém; não o exclua nem substitua. Se não houver suporte a hardlinks, pare e relate o bloqueio em vez de copiar ou sobrescrever um banco. Depois de resolver o problema de dependência ou de caminho, execute `/restart-session` na mesma sessão e worktree, peça ao Copilot que reabra o canvas e repita as verificações de tabelas, dados e renderização visual.
 
 ## Criar um canvas para fazer a triagem de issues
 

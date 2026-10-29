@@ -30,13 +30,12 @@ const ptBrSidebarLabels = {
   '/real-world-development/app/8-create-pull-request/': '8. Criar e mesclar o PR',
   '/real-world-development/app/9-canvases/': '9. Explorar e criar canvases',
   '/real-world-development/app/10-review/': '10. Revisão e próximos passos',
-  '/real-world-development/app/8-foundry-canvas/': 'Visão geral',
-  '/real-world-development/app/8-foundry-canvas/1-project-and-model/': '1. Preparar projeto e modelo',
-  '/real-world-development/app/8-foundry-canvas/2-build-and-deploy/': '2. Criar e implantar o agente',
-  '/real-world-development/app/8-foundry-canvas/3-connect-to-site/': '3. Conectar o agente ao site',
 };
 
-/** @param {any} item */
+/**
+ * @param {{ link?: string, items?: any[], [key: string]: any }} item
+ * @returns {any}
+ */
 const localizeSidebarItem = (item) => {
   const localizedLabel = item.link ? ptBrSidebarLabels[item.link] : undefined;
   return {
@@ -44,7 +43,13 @@ const localizeSidebarItem = (item) => {
     ...(localizedLabel
       ? { translations: { 'pt-BR': localizedLabel } }
       : {}),
-    ...(item.items ? { items: item.items.map(localizeSidebarItem) } : {}),
+    ...(item.items
+      ? {
+          items: item.items
+            .filter((child) => child.label !== 'Optional: Incorporate Foundry')
+            .map(localizeSidebarItem),
+        }
+      : {}),
   };
 };
 

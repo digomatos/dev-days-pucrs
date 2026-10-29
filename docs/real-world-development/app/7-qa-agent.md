@@ -49,18 +49,18 @@ Before using the new agent, review its profile to confirm Copilot captured the i
 
 ## Run QA against the issue
 
-With the profile reviewed, select QA in the current session so it can use the filtering issue and planning decisions already in context. Confirm the active agent before asking it to begin the review.
+Creating `.github/agents/qa.agent.md` defines the QA profile, but does not select it as the active agent. **Interactive** is the session mode, not the agent picker. With the profile reviewed, load and select QA before asking it to begin the review.
 
-1. In the current session, open the agent picker in the prompt box.
-2. Select **QA** and verify that the app visibly identifies **QA** as the active agent before sending the run prompt.
-3. Send the following prompt to ask QA to review the feature:
+1. Continue in the same session where you planned and implemented the filtering feature so the issue and planning decisions remain in context.
+2. If **QA** does not appear in the agent picker or `/agent` is unavailable, run `/restart-session` to restart the session while preserving its history. This resolved the loading issue during the lab test.
+3. Use `/agent` or the agent picker in the prompt box to select **QA**.
+4. Verify that the app visibly identifies **QA** as the active agent before sending the following prompt:
 
     ```plaintext
     Review the filtering feature against the issue and the decisions in our plan. Is it ready for a PR?
     ```
 
-4. Confirm QA uses the correct issue and planning decisions. Provide the issue URL or any missing context if it asks.
-5. Read through the report it provides once it's done doing its work!
+5. Confirm QA uses the correct issue and planning decisions. Provide the issue URL or any missing context if it asks, then read the final report once the review is complete.
 
 ## Summary and next steps
 

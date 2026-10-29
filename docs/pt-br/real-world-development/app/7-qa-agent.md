@@ -53,11 +53,12 @@ Antes de usar o novo agente, revise o perfil para confirmar que o Copilot captur
 
 ## Executar QA em relação à issue
 
-Com o perfil revisado, selecione QA na sessão atual para que ele possa usar a issue de filtragem e as decisões de planejamento que já estão no contexto. Confirme o agente ativo antes de pedir que ele inicie a revisão.
+Criar `.github/agents/qa.agent.md` define o perfil de QA, mas não o seleciona como agente ativo. **Interactive** é o modo da sessão, não o seletor de agentes. Com o perfil revisado, carregue e selecione QA antes de pedir que ele inicie a revisão.
 
-1. Na sessão atual, abra o seletor de agentes na caixa do prompt.
-2. Selecione **QA** e verifique se o aplicativo identifica visivelmente **QA** como agente ativo antes de enviar o prompt de execução.
-3. Envie o prompt a seguir para pedir que o QA revise o recurso:
+1. Continue na mesma sessão em que você planejou e implementou a funcionalidade de filtragem para manter a issue e as decisões do plano no contexto.
+2. Se **QA** não aparecer no seletor de agentes ou `/agent` não estiver disponível, execute `/restart-session` para reiniciar a sessão preservando o histórico. Esse procedimento resolveu o problema de carregamento durante o teste do laboratório.
+3. Use `/agent` ou o seletor de agentes na caixa do prompt para selecionar **QA**.
+4. Confirme visualmente que o aplicativo identifica **QA** como agente ativo antes de enviar o prompt a seguir:
 
     ```plaintext
     Review the filtering feature against the issue and the decisions in our plan. Is it ready for a PR?
@@ -65,8 +66,7 @@ Com o perfil revisado, selecione QA na sessão atual para que ele possa usar a i
 
     **Tradução:** Revise o recurso de filtragem em relação à issue e às decisões do nosso plano. Ele está pronto para um PR?
 
-4. Confirme que o QA usa a issue e as decisões de planejamento corretas. Forneça a URL da issue ou qualquer contexto ausente se ele solicitar.
-5. Quando o trabalho for concluído, leia o relatório apresentado.
+5. Confirme que o QA usa a issue e as decisões do plano corretas. Forneça a URL da issue ou qualquer contexto ausente se ele solicitar e leia o relatório final quando a revisão for concluída.
 
 ## Resumo e próximos passos
 

@@ -31,7 +31,7 @@ Em uma sessão, você verá três elementos: a **conversa** com o agente, a **at
 Vamos iniciar uma nova sessão para começar a explorar o projeto e implementar o recurso. Em uma [lição anterior][prior-lesson], você adicionou o projeto por meio do repositório do GitHub. Criaremos uma nova sessão para esse repositório e solicitaremos a alteração.
 
 1. Volte ao aplicativo GitHub Copilot ou abra-o.
-2. Selecione **+** ao lado de **Projects**.
+2. Selecione **+** no topo da barra lateral para iniciar uma sessão.
 3. Selecione `tailspin-toys` como repositório.
 4. Escolha **new working tree** e o modo **Interactive** abaixo da caixa de prompt. Use o prompt a seguir para solicitar a alteração:
 

@@ -67,6 +67,10 @@ Queremos um relatório melhor, que mostre o que foi executado, se teve sucesso e
     Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
     ```
 
+    **Tradução:** Formatação da saída dos resultados.
+
+    Ao concluir, informe cada comando executado e se ele foi aprovado, falhou ou ficou bloqueado. Inclua contagens de testes, durações, erros, avisos e outras métricas somente quando a ferramenta os informar. Indique a próxima ação para cada falha ou bloqueio e nunca descreva uma verificação ignorada ou incompleta como aprovada.
+
 O arquivo será salvo automaticamente.
 
 ## Executar a skill atualizada

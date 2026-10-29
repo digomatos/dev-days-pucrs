@@ -108,14 +108,20 @@ O código parece correto, mas será que funciona? Vamos iniciar o aplicativo com
     **Tradução:** Inicie o aplicativo e abra-o no canvas de navegador.
 
 2. Em alguns instantes, o aplicativo será iniciado e uma janela do navegador será aberta dentro do aplicativo Copilot.
-3. Confirme se os cards de jogos avaliados exibem a nota de um total de cinco.
-4. Quando terminar, use o prompt a seguir para pedir ao Copilot que interrompa o servidor de desenvolvimento iniciado para esta sessão:
+3. Selecione uma categoria e confirme que os resultados correspondem a ela. Limpe o filtro, selecione uma editora e confirme que os resultados correspondem a essa editora.
+4. Combine os filtros de categoria e editora e compare os resultados com a issue e o plano aprovado. Se houver suporte a várias categorias, verifique o comportamento de combinação acordado.
+5. Teste uma combinação sem jogos correspondentes e confira o estado vazio. Limpe ou redefina os filtros e confirme que a lista completa volta a aparecer.
+6. Quando terminar, use o prompt a seguir para pedir ao Copilot que interrompa o servidor de desenvolvimento iniciado para esta sessão:
 
     ```plaintext
     Stop the dev server and close the browser canvas.
     ```
 
     **Tradução:** Pare o servidor de desenvolvimento e feche o canvas de navegador.
+
+## Manter esta sessão para as próximas lições
+
+Ainda não crie nem faça o merge do PR de filtragem. Mantenha esta sessão, worktree e branch para as lições 4 a 8. Em seguida, você aplicará instruções personalizadas ao código de filtragem e adicionará as melhorias de skill e QA antes de criar e fazer o merge do PR conjunto na lição 8. Você pode deixar a sessão ociosa depois de parar o servidor de desenvolvimento; retorne à mesma sessão na próxima lição.
 
 ## Resumo e próximos passos
 

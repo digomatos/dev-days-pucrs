@@ -31,7 +31,7 @@ Up to this point you've selected **Merge pull request** yourself. Agent Merge ca
 
 With all of your code created and reviewed, let's allow agent merge to manage the PR process.
 
-1. Use the agent picker to select **Default agent**.
+1. Use the agent picker to remove the selected **QA** agent.
 2. Select the dropdown next to **Create PR**.
 3. Select **Agent Merge**. The button changes to **Agent Merge**.
 4. Select the **Agent Merge** button to start the process. Choosing the dropdown option alone does not start it.
@@ -47,7 +47,7 @@ The agent merge process kicks off. It will:
 
 Let's let agent merge also merge the PR once everything passes!
 
-5. Review the PR diff and verification evidence before granting merge permission.
+5. Once the pull request has been created, select **View PR** to open it. Review the PR diff and verification evidence before granting merge permission.
 6. Select the dropdown next to **Agent Merge**.
 7. Ensure there's a check next to **Merge pull request**.
 8. Explicitly ask the agent to merge:
@@ -56,7 +56,7 @@ Let's let agent merge also merge the PR once everything passes!
     Merge the PR once all required checks and approvals pass. Do not bypass repository protections.
     ```
 
-9. Follow its progress and resolve any reported blockers. Confirm the PR status is **Merged** before continuing; enabled merge permission or a running agent is not confirmation of a completed merge.
+9. Follow its progress and resolve any reported blockers. Use **View PR** to check the pull request and confirm its status is **Merged** before continuing; enabled merge permission or a running agent is not confirmation of a completed merge.
 
 > [!IMPORTANT]
 > Agent Merge does not bypass repository protections or missing permissions. Resolve those blockers before continuing.

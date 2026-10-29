@@ -31,10 +31,10 @@ Até aqui, você selecionou **Merge pull request** por conta própria. O Agent M
 
 Com todo o código criado e revisado, vamos permitir que o Agent Merge gerencie o processo do PR.
 
-1. Use o seletor de agentes para selecionar **Default agent**.
+1. Use o seletor de agentes para remover o agente **QA** selecionado.
 2. Selecione o menu suspenso ao lado de **Create PR**.
-3. Selecione **Agent merge**. O botão mudará para **Agent merge**.
-4. Selecione **Agent merge** para iniciar o processo.
+3. Selecione **Agent Merge**. O botão mudará para **Agent Merge**.
+4. Selecione o botão **Agent Merge** para iniciar o processo. Apenas escolher a opção no menu suspenso não inicia o processo.
 
 O processo do Agent Merge começa. Ele vai:
 
@@ -47,9 +47,18 @@ O processo do Agent Merge começa. Ele vai:
 
 Vamos permitir que o Agent Merge também faça o merge do PR quando tudo for concluído com sucesso!
 
-5. Selecione o menu suspenso ao lado de **Agent merge**.
-6. Confirme se há uma marca ao lado de **Merge pull request**.
+5. Depois que o pull request for criado, selecione **View PR** para abri-lo. Revise o diff do PR e as evidências de verificação antes de conceder permissão de merge.
+6. Selecione o menu suspenso ao lado de **Agent Merge**.
+7. Confirme se há uma marca ao lado de **Merge pull request**.
+8. Peça explicitamente ao agente que faça o merge:
 
+  ```plaintext
+  Merge the PR once all required checks and approvals pass. Do not bypass repository protections.
+  ```
+
+  **Tradução:** Faça o merge do PR assim que todas as verificações e aprovações obrigatórias forem concluídas com sucesso. Não contorne as proteções do repositório.
+
+9. Acompanhe o progresso e resolva os bloqueios relatados. Use **View PR** para conferir o pull request e confirmar que o status é **Merged** antes de continuar; habilitar a permissão de merge ou ter um agente em execução não confirma que o merge foi concluído.
 
 > [!IMPORTANT]
 > O Agent Merge não ignora as proteções do repositório nem as permissões ausentes. Resolva esses bloqueios antes de continuar.
